@@ -1,0 +1,300 @@
+/*  DEFAULT CSS STYLES FOR EVERY PAGE
+	Includes all the styles that are the same across all CSS files so that I don't have to edit all of them to edit what they all share */
+	
+/* FONT IMPORTS */
+@font-face { /* Major Titles, Navbar */
+	font-family: ITC Serif Gothic;
+	src: url('ITC SerifGothic.ttf'); 
+}
+
+@font-face { /* Minor Titles */
+	font-family: ITC Avant Garde Std Md; 
+	src: url('itc-avant-garde-std-md.ttf'); 
+}
+
+@font-face { /* General Text */
+	font-family: Brandon Grotesque; 
+	src: url('brandon-grotesque-regular.ttf'); 
+}
+
+
+
+/*  ID / CLASS CHEAT SHEET 
+	-- IDS --
+	#hgTwins
+	#otherLocations
+	#about
+	#planetaryChart
+	#hgtTitle
+	#thTitle
+	#gdTitle
+	#dbTitle
+	#attleTitle
+	#qmTitle
+	#interTitle
+	#whTitle
+	#minorChars
+	
+	-- CLASSES --
+	.dropdown
+	.dropdown-content
+	.dropbtn
+	.dropmid
+	.dropbottom
+	
+	.bhwhTitle
+	.indexPlanets
+	.indexChars
+	.charLeft
+	.charRight
+	.charAbout
+	.loopState
+*/
+
+
+
+/* --- SPOILER STYLES --- */
+.collapsible { /* Spoiler button settings */
+	display: block;
+	cursor: pointer;
+	border-radius: 0.75em;
+	margin: 2em auto;
+	padding: 0.5em 1em;
+	text-align: center;
+	font-size: 1.75em;
+	color: white;
+	outline: none;
+	width: fit-content;
+}
+
+.content { /* Part of the spoiler button function */
+	display: none;
+	overflow: hidden;
+}
+
+.collapsible { /* Gives spoiler button animation */
+	transition: transform .2s;
+}
+
+.collapsible:hover { /* Zooms button by 105% */
+	transform: scale(1.05);
+}
+
+
+
+/*  --- BANNER & NAVIGATION BAR SETTINGS --- */
+body > header > a > img { /* Title Banner */
+	display: block;
+	width: 100%;
+}
+
+/* Navigation Bar */
+
+nav { /* The navbar itself */
+	font-family: 'ITC Serif Gothic', 'Times New Roman', serif;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+nav ul { /* Whole navbar button group */
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+}
+
+nav ul li { /* Individual navbar buttons */
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+
+nav ul li a { /* Navbar button text */
+	display: block;
+	border: 0.1em solid black;
+	border-radius: 0.35em;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	padding: 0.25em;
+}
+
+/* Navbar Dropdowns */
+
+.dropdown:hover .dropdown-content { /* Unhides dropdown options when hovered */
+	display: block;
+}
+
+.dropdown-content { /* Dropdown options */
+	display: none;
+	position: absolute;
+	text-wrap: wrap;
+	z-index: 1;
+}
+
+.dropdown:hover .dropbtn { /* Makes the bottom of the dropdown button flat */
+	border-radius: 0.35em 0.35em 0 0;
+	border-bottom-width: 0.05em;
+}
+
+.dropdown-content .dropmid { /* Border for middle dropdown option */
+	border-radius: 0 0 0 0;
+	border-top-width: 0.05em;
+	border-bottom-width: 0.05em;
+}
+
+.dropdown-content .dropbottom { /* Border for bottom dropdown option */
+	border-radius: 0 0 0.35em 0.35em;
+	border-top-width: 0.05em;
+}
+
+#hgTwins { /* Makes the HG Twins dropdown options size match */
+	min-width: 7.67em;
+}
+
+#otherLocations { /* Makes the Other Locations dropdown options size match */
+	max-width: 7.67em;
+}
+
+
+
+/* --- MAIN STYLES --- */
+html {
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+
+main { /* Sets contents of page to not touch edges of screen */
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+}
+
+h1, h2, h4 { /* Sets general h2 font */
+	font-family: 'ITC Serif Gothic', 'Times New Roman', serif;
+	font-weight: bold;
+	margin: auto;
+}
+
+h3, button { /* Sets general h3 font */
+	font-family: 'ITC Avant Garde Std Md', 'Verdana', sans-serif;
+}
+
+p { /* Sets general p font */
+	font-family: 'Brandon Grotesque', 'Verdana', sans-serif;
+}
+
+main p { /* Paragraph text */
+	padding: 1em;
+	font-size: 1.75em;
+	line-height: 1.5;
+}
+
+/* General Images */
+
+div.loopState { /* Loop State Image Group */
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+}
+
+div.loopState figure { /* Loop State Image + Caption */
+	width: 45%;
+}
+
+div.loopState figure img { /* Loop State Image */
+	width: 100%;
+}
+
+/* Image Map Settings */
+
+.image-mapper-shape { /* Makes image map clickable area transparent */
+	fill: rgba(0, 0, 0, 0);
+}
+
+
+
+/* -- FOOTER STYLES -- */
+footer {
+	display: block;
+	margin-top: 3em;
+	text-align: center;
+}
+
+footer > section { /* Game links section */
+	padding: 2em 0em;
+}
+
+footer h2 { /* Where to Play title */
+	margin-bottom: 1.5em;
+	font-size: 1.75em;
+}
+
+footer h3 { /* Back to Top button */
+	margin-top: 1.75em;
+	font-size: 1.25em;
+}
+ 
+footer h3 a:link, footer h3 a:visited, footer h3 a:active { /* Back to Top button link */
+	text-decoration: none;
+	color: white;
+}
+
+footer h3 a:hover { /* Back to Top button hover */
+	text-shadow: 0 0 0.25em white;
+}
+
+/* Game Link Images */
+
+footer > section > div { /* Game link group */
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-evenly;
+}
+
+footer > section > div a { /* Game link clickable link */
+	display: block;
+	width: 20%;
+	padding-bottom: 2em;
+}
+
+footer > section > div img { /* Game link images */
+	display: block;
+	margin: auto;
+	width: 40%;
+	transition: transform .2s;
+}
+
+footer > section > div img:hover { /* Zooms game link image by 115% */
+	transform: scale(1.15);
+}
+
+
+
+/* --- RESPONSIVE DESIGN --- */
+@media screen and (max-width: 600px) {
+	/* --- NAVBAR --- */
+	nav { /* The bar itself */
+		font-size: 1.10em;
+	}
+	
+	/* --- MAIN --- */
+	main { /* Sets contents of page to not touch edges of screen */
+		margin-left: auto;
+		margin-right: auto;
+		width: 90%;
+	}
+	
+	div.loopState figure { /* Sets images to be stack on top of each other */
+		width: 100%;
+	}
+	
+	/* --- FOOTER --- */
+	footer > section > div { /* Game link group */
+		display: flex;
+		flex-flow: row wrap;
+	}
+	
+	footer > section > div a { /* Game link clickable link */
+		width: 50%;
+	}
+}
