@@ -21,7 +21,9 @@
 
 /*  ID / CLASS CHEAT SHEET 
 	-- IDS --
+	#top
 	#hgTwins
+	#hgtMap
 	#otherLocations
 	#about
 	#planetaryChart
@@ -34,6 +36,11 @@
 	#interTitle
 	#whTitle
 	#minorChars
+	#loopState
+	#cityPhotos
+
+	#EGTC
+	#QML
 	
 	-- CLASSES --
 	.dropdown
@@ -48,7 +55,9 @@
 	.charLeft
 	.charRight
 	.charAbout
-	.loopState
+	.poiLeft
+	.poiRight
+	.squareImage
 */
 
 
@@ -103,8 +112,7 @@ nav ul { /* Whole navbar button group */
 }
 
 nav ul li { /* Individual navbar buttons */
-	padding-top: 0.5em;
-	padding-bottom: 0.5em;
+	padding: 0.5em 0;
 }
 
 nav ul li a { /* Navbar button text */
@@ -114,7 +122,7 @@ nav ul li a { /* Navbar button text */
 	color: white;
 	text-align: center;
 	text-decoration: none;
-	padding: 0.25em;
+	padding: 0.25em 0.5em;
 }
 
 /* Navbar Dropdowns */
@@ -147,11 +155,11 @@ nav ul li a { /* Navbar button text */
 }
 
 #hgTwins { /* Makes the HG Twins dropdown options size match */
-	min-width: 7.67em;
+	min-width: 8.21em;
 }
 
 #otherLocations { /* Makes the Other Locations dropdown options size match */
-	max-width: 7.67em;
+	max-width: 8.21em;
 }
 
 
@@ -169,6 +177,8 @@ main { /* Sets contents of page to not touch edges of screen */
 	width: 80%;
 }
 
+/* General Font Families */
+
 h1, h2, h4 { /* Sets general h2 font */
 	font-family: 'ITC Serif Gothic', 'Times New Roman', serif;
 	font-weight: bold;
@@ -179,7 +189,7 @@ h3, button { /* Sets general h3 font */
 	font-family: 'ITC Avant Garde Std Md', 'Verdana', sans-serif;
 }
 
-p { /* Sets general p font */
+p, figcaption { /* Sets general p font */
 	font-family: 'Brandon Grotesque', 'Verdana', sans-serif;
 }
 
@@ -189,20 +199,89 @@ main p { /* Paragraph text */
 	line-height: 1.5;
 }
 
-/* General Images */
+/* General Text Settings */
 
-div.loopState { /* Loop State Image Group */
+main h1 { /* Planet Page Titles */
+	margin: 1em auto 0.5em;
+	font-size: 4em;
+}
+
+main > h2 { /* Planet Page Minor Titles */
+	font-size: 2.75em;
+	text-shadow: black 0.075em 0.075em 2px;
+	margin: 2.5em auto 0.75em;
+}
+
+main > p { /* Planet Page paragraph spacing */
+	margin-bottom: 1em;
+}
+
+figcaption { /* Sets figcaption spacing and size */
+	margin: 0.5em 0;
+	font-size: 1.25em;
+}
+
+/* General Images & Videos */
+
+div#loopState, div#cityPhotos { /* Loop State Image Group */
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-evenly;
+	/* background: green; */
 }
 
-div.loopState figure { /* Loop State Image + Caption */
+div#loopState figure, div#cityPhotos figure { /* Loop State Image + Caption */
 	width: 45%;
 }
 
-div.loopState figure img { /* Loop State Image */
+div#loopState figure img, div#cityPhotos img { /* Loop State Image */
+	display: block;
 	width: 100%;
+}
+
+video {
+	width: 60%;
+}
+
+/* POI Styles */
+
+div.poiLeft, div.poiRight { /* Centers POI divs */
+	margin: auto;
+}
+
+.poiLeft img, .poiLeft video, .poiRight img, .poiRight video { /* Sets size of POI imgs and videos */
+	width: 40%;
+}
+
+.poiLeft img, .poiLeft video { /* Settings for left POI imgs and videos */
+	float: left;
+	margin-right: 1em;
+}
+
+.poiRight img, .poiRight video { /* Settings for right POI imgs and videos */
+	float: right;
+	margin-left: 1em;
+}
+
+img.squareImage { /* Sets size of square image to match rectangle images */
+	width: 25%;
+}
+
+main h3 { /* POI title settings */
+	font-size: 2em;
+	margin: 3em auto 1em;
+}
+
+.poiLeft p, .poiRight p { /* Resets padding on POI paragraphs */
+	padding: 0;
+}
+
+.poiLeft p, .poiLeft h3 {  /* Settings for POI Left text */
+	text-align: right;
+}
+
+.poiRight p, .poiRight h3 { /* Settings for POI Right text */
+	text-align: left;
 }
 
 /* Image Map Settings */
@@ -276,6 +355,18 @@ footer > section > div img:hover { /* Zooms game link image by 115% */
 	nav { /* The bar itself */
 		font-size: 1.10em;
 	}
+
+	nav ul li a { /* Navbar button text - removed left/right padding */
+		padding: 0.25em;
+	}
+
+	#hgTwins { /* Makes the HG Twins dropdown options size match */
+		min-width: 7.67em;
+	}
+
+	#otherLocations { /* Makes the Other Locations dropdown options size match */
+		max-width: 7.67em;
+	}
 	
 	/* --- MAIN --- */
 	main { /* Sets contents of page to not touch edges of screen */
@@ -283,10 +374,34 @@ footer > section > div img:hover { /* Zooms game link image by 115% */
 		margin-right: auto;
 		width: 90%;
 	}
+
+	main p { /* Paragraph text */
+		padding: 1em 0.5em;
+		font-size: 1.5em;
+	}
 	
-	div.loopState figure { /* Sets images to be stack on top of each other */
+	div#loopState figure, div#cityPhotos figure { /* Sets images to be stack on top of each other */
 		width: 100%;
 	}
+
+	video { /* Makes videos fill screen sides */
+		width: 95%;
+	}
+
+	.poiLeft img, .poiLeft video, .poiRight img, .poiRight video { /* Makes POI imgs and videos fill center of screen */
+		float: none;
+		margin: 1em 0;
+		width: 95%;
+	}
+
+	.poiLeft p, .poiLeft h3 { /* Settings for POI Left text */
+		text-align: center;
+	}
+
+	.poiRight p, .poiRight h3 { /* Settings for POI Right text */
+		text-align: center;
+	}
+
 	
 	/* --- FOOTER --- */
 	footer > section > div { /* Game link group */

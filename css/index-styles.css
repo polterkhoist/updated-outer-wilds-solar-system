@@ -100,14 +100,23 @@ div#minorChars p { /* Minor Characters Name & Role Spacing */
 	margin-bottom: 1em;
 }
 
-section.indexPlanets img { /* Gives planet images animation */
+section.indexPlanets img, div#hgtMap { /* Gives planet images animation */
 	transition: transform .2s, box-shadow .2s;
 }
 
-section.indexPlanets img:hover { /* Zooms planet image by 105%, increases size of white glow */
+section.indexPlanets img:hover, div#hgtMap:hover { /* Zooms planet image by 105%, increases size of white glow */
 	transform: scale(1.05);
 	box-shadow: white 0 0 1.25em;
 }
+
+div#hgtMap { /* Allows HG Twins image map to have same style as other images */
+	display: block;
+	margin: auto;
+	width: 90%;
+	border: 0.20em solid white;
+	box-shadow: white 0 0 0.75em;
+}
+
 
 div#planetaryChart { /* Allows PlanChart image map to have same style as other images */
 	display: block;
@@ -245,11 +254,6 @@ footer {
 		border: 0.075em solid white;
 		padding: 0.5em;
 		font-size: 1.75em;
-	}
-	
-	main p { /* Paragraph text */
-		padding: 1em 0.5em;
-		font-size: 1.5em;
 	}
 	
 	main img { /* Body Images */
