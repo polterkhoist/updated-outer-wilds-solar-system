@@ -17,6 +17,11 @@
 	src: url('brandon-grotesque-regular.ttf'); 
 }
 
+@font-face { /* Backup Font for ITC Serif Gothic */
+  font-family: 'Josefin Sans';
+  src: url(https://fonts.gstatic.com/s/josefinsans/v34/Qw3aZQNVED7rKGKxtqIqX5EUDXx4.woff2) format('woff2');
+}
+
 
 
 /*  ID / CLASS CHEAT SHEET 
@@ -100,7 +105,7 @@ body > header > a > img { /* Title Banner */
 /* Navigation Bar */
 
 nav { /* The navbar itself */
-	font-family: 'ITC Serif Gothic', 'Times New Roman', serif;
+	font-family: 'ITC Serif Gothic', 'Josefin Sans', 'Times New Roman', serif;
 	font-size: 1.5em;
 	font-weight: bold;
 }
@@ -180,7 +185,7 @@ main { /* Sets contents of page to not touch edges of screen */
 /* General Font Families */
 
 h1, h2, h4 { /* Sets general h2 font */
-	font-family: 'ITC Serif Gothic', 'Times New Roman', serif;
+	font-family: 'ITC Serif Gothic', 'Josefin Sans', 'Times New Roman', serif;
 	font-weight: bold;
 	margin: auto;
 }
