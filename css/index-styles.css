@@ -239,6 +239,10 @@ footer {
 		width: 100%;
 		overflow: visible;
 	}
+
+	div#minorChars > div { /* Allows Minor Char images to be on top of each other */
+		width: 100%;
+	}
 }
 
 /* Screens under 600px width */

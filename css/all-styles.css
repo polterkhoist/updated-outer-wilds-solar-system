@@ -43,6 +43,7 @@
 	#minorChars
 	#loopState
 	#cityPhotos
+	#travAudio
 
 	#EGTC
 	#QML
@@ -63,6 +64,9 @@
 	.poiLeft
 	.poiRight
 	.squareImage
+	.pNoMargin
+	.belowButton
+	.subTitle
 */
 
 
@@ -204,6 +208,19 @@ main p { /* Paragraph text */
 	line-height: 1.5;
 }
 
+main p > a:link { /* Sets link color */
+	color: white;
+}
+
+main p > a:visited { /* Sets visited link color */
+	color: white;
+}
+
+main p > a:hover { /* Sets link hover color & glow */
+	color: white;
+	text-shadow: white 0 0  0.25em;
+}
+
 /* General Text Settings */
 
 main h1 { /* Planet Page Titles */
@@ -217,7 +234,11 @@ main > h2 { /* Planet Page Minor Titles */
 	margin: 2.5em auto 0.75em;
 }
 
-main > p { /* Planet Page paragraph spacing */
+main > h2.subTitle { /* Makes subtitle font smaller */
+	font-size: 2em;
+}
+
+main > p { /* Planet page desc. paragraph spacing */
 	margin-bottom: 1em;
 }
 
@@ -228,15 +249,21 @@ figcaption { /* Sets figcaption spacing and size */
 
 /* General Images & Videos */
 
-div#loopState, div#cityPhotos { /* Loop State Image Group */
+main > img { /* Sets size of images directly under main */
+	display: block;
+	margin: auto;
+	width: 50%;
+}
+
+div#loopState, div#cityPhotos, div#travAudio { /* Image Groups + Audio Group */
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-evenly;
-	/* background: green; */
 }
 
 div#loopState figure, div#cityPhotos figure { /* Loop State Image + Caption */
 	width: 45%;
+	margin-bottom: 2.5em;
 }
 
 div#loopState figure img, div#cityPhotos img { /* Loop State Image */
@@ -244,8 +271,14 @@ div#loopState figure img, div#cityPhotos img { /* Loop State Image */
 	width: 100%;
 }
 
-video {
+video { /* Sets size of videos */
 	width: 60%;
+}
+
+div#travAudio audio { /* Settins for traveller audio elements */
+	display: block;
+	padding: 1em 0;
+	width: 30%;
 }
 
 /* POI Styles */
@@ -274,11 +307,20 @@ img.squareImage { /* Sets size of square image to match rectangle images */
 
 main h3 { /* POI title settings */
 	font-size: 2em;
-	margin: 3em auto 1em;
+	margin: 1.5em auto 1em;
 }
 
-.poiLeft p, .poiRight p { /* Resets padding on POI paragraphs */
+main h3.belowButton { /* Adds spacing to h3 below button */
+	margin-top: 3.5em;
+}
+
+.poiLeft p, .poiRight p { /* Resets padding on POI paragraphs & spacing between POIs */
 	padding: 0;
+	margin-bottom: 4em;
+}
+
+p.pNoMargin { /* Removes paragraph bottom spacing */
+	margin-bottom: 0;
 }
 
 .poiLeft p, .poiLeft h3 {  /* Settings for POI Left text */
@@ -384,8 +426,13 @@ footer > section > div img:hover { /* Zooms game link image by 115% */
 		padding: 1em 0.5em;
 		font-size: 1.5em;
 	}
+
 	
-	div#loopState figure, div#cityPhotos figure { /* Sets images to be stack on top of each other */
+	main > img { /* Size for singular planet image in Planet Pages */
+		width: 100%;
+	}
+	
+	div#loopState figure, div#cityPhotos figure, div#travAudio audio { /* Sets images to be stack on top of each other */
 		width: 100%;
 	}
 
