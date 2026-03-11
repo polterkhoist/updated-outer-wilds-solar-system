@@ -172,7 +172,6 @@ section.indexChars div.majorChars { /* All Character Abouts Grouped */
 section.indexChars div.majorChars > div.charLeft { /* Character Abouts - Left Align */
 	display: flex;
 	margin: 2em 0;
-	height: 73.5vh;
 	width: 90%;
 }
 
@@ -180,7 +179,6 @@ section.indexChars div.majorChars > div.charRight { /* Character Abouts - Right 
 	display: flex;
 	flex-flow: row-reverse nowrap;
 	margin: 2em 0;
-	height: 73.5vh;
 	width: 90%;
 }
 
@@ -194,14 +192,19 @@ section.indexChars div.charAbout { /* Character About Text */
 	margin: auto;
 	border: 0.20em solid white;
 	box-shadow: white 0 0 0.75em;
-	height: 100%;
+	aspect-ratio: 1 / 1;
+	max-height: 100%;
 	width: 48%;
 	overflow: scroll;
 	overflow-x: hidden;
 }
 
 section.indexChars div.charAbout h4 { /* Character Name */
-	font-size: 2em;
+	font-size: 1.75em;
+}
+
+audio {
+	margin-bottom: 1.75em;
 }
 
 
@@ -236,6 +239,7 @@ footer {
 	
 	section.indexChars div.charAbout { /* Character About Text */
 		padding: 0.75em 0em 0.5em;
+		aspect-ratio: auto;
 		width: 100%;
 		overflow: visible;
 	}

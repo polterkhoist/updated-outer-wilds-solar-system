@@ -44,6 +44,8 @@
 	#loopState
 	#cityPhotos
 	#travAudio
+	#simulation
+	#theater
 
 	#EGTC
 	#QML
@@ -228,7 +230,7 @@ main h1 { /* Planet Page Titles */
 	font-size: 4em;
 }
 
-main > h2 { /* Planet Page Minor Titles */
+main > h2, main > div h2 { /* Planet Page Minor Titles */
 	font-size: 2.75em;
 	text-shadow: black 0.075em 0.075em 2px;
 	margin: 2.5em auto 0.75em;
@@ -238,7 +240,7 @@ main > h2.subTitle { /* Makes subtitle font smaller */
 	font-size: 2em;
 }
 
-main > p { /* Planet page desc. paragraph spacing */
+main > p, main > div.content > p { /* Planet page desc. paragraph spacing */
 	margin-bottom: 1em;
 }
 
@@ -252,7 +254,7 @@ figcaption { /* Sets figcaption spacing and size */
 main > img { /* Sets size of images directly under main */
 	display: block;
 	margin: auto;
-	width: 50%;
+	width: 60%;
 }
 
 div#loopState, div#cityPhotos, div#travAudio { /* Image Groups + Audio Group */
@@ -275,7 +277,7 @@ video { /* Sets size of videos */
 	width: 60%;
 }
 
-div#travAudio audio { /* Settins for traveller audio elements */
+div#travAudio audio { /* Settings for traveller audio elements */
 	display: block;
 	padding: 1em 0;
 	width: 30%;
@@ -285,6 +287,7 @@ div#travAudio audio { /* Settins for traveller audio elements */
 
 div.poiLeft, div.poiRight { /* Centers POI divs */
 	margin: auto;
+	/* background: red; */
 }
 
 .poiLeft img, .poiLeft video, .poiRight img, .poiRight video { /* Sets size of POI imgs and videos */
@@ -429,11 +432,11 @@ footer > section > div img:hover { /* Zooms game link image by 115% */
 
 	
 	main > img { /* Size for singular planet image in Planet Pages */
-		width: 100%;
+		width: 95%;
 	}
 	
 	div#loopState figure, div#cityPhotos figure, div#travAudio audio { /* Sets images to be stack on top of each other */
-		width: 100%;
+		width: 95%;
 	}
 
 	video { /* Makes videos fill screen sides */
