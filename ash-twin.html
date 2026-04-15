@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Outer Wilds Solar System</title>
+	<link href="css/reset.css" rel="stylesheet">
+	<link href="css/all-styles.css" rel="stylesheet">
+	<link href="css/ash-styles.css" rel="stylesheet">
+</head>
+
+<body id="top">
+	<!-- BANNER & NAVIGATION BAR -->
+	<header>
+		<!-- Banner -->
+		<a href="index.html"><img src="images/ash_banner.png" alt="The Outer Wilds Solar System"></a>
+		<!-- Navbar -->
+		<nav>
+			<ul>
+				<!-- Hourglass Twins Dropdown -->
+				<li class="dropdown">
+					<a href="javascript:void(0)" class="dropbtn">Hourglass Twins</a>
+					<div class="dropdown-content" id="hgTwins" >
+						<a class="dropmid" href="ash-twin.html">Ash Twin</a>
+						<a class="dropbottom" href="ember-twin.html">Ember Twin</a>
+					</div>
+				</li>
+				<li><a href="timber-hearth.html">Timber Hearth</a></li>
+				<li><a href="brittle-hollow.html">Brittle Hollow</a></li>
+				<li><a href="giants-deep.html">Giant's Deep</a></li>
+				<li><a href="dark-bramble.html">Dark Bramble</a></li>
+				<!-- Other Locations Dropdown -->
+				<li class="dropdown">
+					<a href="javascript:void(0)" class="dropbtn">Other Locations</a>
+					<div class="dropdown-content" id="otherLocations" >
+						<a class="dropmid" href="timber-hearth.html#attlerock">The Attlerock</a>
+						<a class="dropmid" href="quantum-moon.html">Quantum Moon</a>
+						<a class="dropmid" href="interloper.html">The Interloper</a>
+						<a class="dropbottom" href="brittle-hollow.html#whiteHole">The White Hole</a>
+					</div>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	
+	<!-- BODY CONTENT -->
+	<main>
+		<h1>ASH TWIN</h1>
+		
+		<p>Ash Twin, one of the two Hourglass Twins, is the closet planet to the sun. Initially, Ash Twin is entirely covered with sand. Over the course of the loop, the sand will drain, revealing the planet's rocky core and many Nomai structures, including the Ash Twin Towers and two large solar-panel energy towers placed on each of the planet's poles.</p>
+		
+        <!-- Loop State Images -->
+		<div id="loopState">
+            <figure>
+                <img src="images/ash_twin_start.jpg" alt="Ash Twin with sand">
+                <figcaption>Ash Twin with sand</figcaption>
+            </figure>
+            <figure>
+                <img src="images/ash_twin_end.jpg" alt="Ash Twin without sand">
+                <figcaption>Ash Twin without sand</figcaption>
+            </figure>
+		</div>
+		
+		<h2>NATURAL PHENOMENA</h2>
+		<p>Some time after the loop starts, a giant sand funnel will form, draining Ash Twin's sand into Ember Twin. The sand funnel slowly moves across both twins' equators until the sand has been completely drained from Ash Twin. Standing under the sand funnel as it drains from Ash Twin will drag the player into Ember Twin's surface. As sand drains from Ash Twin, locations previously inaccesible become revealed.</p>
+		
+        <video autoplay loop muted>
+            <source src="media/hg_twins_nat_phenom.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+		
+		<h2>PLACES OF INTEREST</h2>
+		
+		<div class="poiRight">
+			<h3>The Ash Twin Towers</h3>
+			<p>The Ash Twin Towers are five unique towers designed to visually reflect the sun, the Hourglass Twins, Timber Hearth, Brittle Hollow, and Giant's Deep. They form a ring around Ash Twin's equator and are connected to each other through bridges. Each tower features a warp platform that teleports whoever stands on it to its coresponding receiver platform. The warp platforms do not active immediately, and instead only trigger when the tower is correctly aligned with its corresponding astral body. <a href="brittle-hollow.html#WHS">The White Hole Station</a> was used as a model for the towers. Some of the towers have decayed over time, with the Hourglass Twins Tower being partially broken and the Sun Tower's interior being covered with cacti.</p>
+		</div>
+
+        <!-- Tower Images -->
+		<div id="cityPhotos">
+            <figure>
+                <img src="images/sun_tower.jpg" alt="The Sun Tower">
+                <figcaption>The Sun Tower</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/hg_twins_tower.jpg" alt="The Hourglass Twins Tower">
+                <figcaption>The Hourglass Twins Tower</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/timber_tower.jpg" alt="The Timber Hearth Tower">
+                <figcaption>The Timber Hearth Tower</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/brittle_tower.jpg" alt="The Brittle Hollow Tower" class="secondRow">
+                <figcaption>The Brittle Hollow Tower</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/giants_tower.jpg" alt="The Giant's Deep Tower" class="secondRow">
+                <figcaption>The Giant's Deep Tower</figcaption>
+            </figure>
+		</div>
+
+		<button type="button" class="collapsible">Click to Reveal Spoiler<br>(MAJOR SPOILER)</button>
+		<div class="content">
+			<div class="poiLeft">
+				<h3>The Ash Twin Project</h3>
+				<img src="images/ash_twin_project.jpg" alt="Photo the Ash Twin Project">
+				<p>The Ash Twin Project is located in the hollowed out core of Ash Twin. The energy cables from the solar-panel energy towers are plugged into a protective casing at the center of the planet. The protective casing holds an advanced warp core that, if removed, will disable the Ash Twin Project. The Ash Twin Project is the intergral piece of the Nomai's efforts to find the Eye of the Universe. It is designed to use the energy from a supernova to send the data it collects twenty-two minutes into the past. The interior of the Ash Twin Project features eight monoliths with Nomai masks attatched that collect either data from the Probe Tracking Module or anyone linked via a Nomai statue. Currently, only three masks are actived, collecting data from the Probe Tracking Module, Gabbro, and the player. The interior also features a switch for the artificial gravity control and a switch for opening the protective casing.</p>
+			</div>
+		</div>
+	</main>
+	
+	<!-- FOOTER -->
+	<footer>
+		<section>
+			<h2>Where to Play</h2>
+			
+			<div>
+				<a href="https://store.steampowered.com/app/753640/Outer_Wilds/"><img src="images/steam_logo.png" alt="Steam"></a>
+				<a href="https://store.epicgames.com/en-US/p/outerwilds"><img src="images/epicgames_logo.png" alt="Epic Games"></a>
+				<a href="https://store.playstation.com/en-us/product/UP2470-PPSA08101_00-OUTERWILDSSIEA00"><img src="images/playstation_logo.png" alt="Playstation"></a>
+				<a href="https://www.xbox.com/en-us/games/store/outer-wilds/c596fkdkmqn7"><img src="images/xbox_logo.png" alt="Xbox"></a>
+				<a href="https://www.nintendo.com/us/store/products/outer-wilds-switch/"><img src="images/nintendo_logo.png" alt="Nintendo Switch"></a>
+			</div>
+			
+			<h3><a href="#top">Back to Top</a></h3>
+		</section>
+	</footer>
+	
+	<!-- Allows buttons to work -->
+	<script>
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+
+		for (i = 0; i < coll.length; i++) {
+		  coll[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var content = this.nextElementSibling;
+			if (content.style.display === "block") {
+			  content.style.display = "none";
+			} else {
+			  content.style.display = "block";
+			}
+		  });
+		}
+	</script>
+</body>
+
+</html>

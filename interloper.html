@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The Outer Wilds Solar System</title>
+	<link href="css/reset.css" rel="stylesheet">
+	<link href="css/all-styles.css" rel="stylesheet">
+	<link href="css/interloper-styles.css" rel="stylesheet">
+</head>
+
+<body id="top">
+	<!-- BANNER & NAVIGATION BAR -->
+	<header>
+		<!-- Banner -->
+		<a href="index.html"><img src="images/bramble_banner.png" alt="The Outer Wilds Solar System"></a>
+		<!-- Navbar -->
+		<nav>
+			<ul>
+				<!-- Hourglass Twins Dropdown -->
+				<li class="dropdown">
+					<a href="javascript:void(0)" class="dropbtn">Hourglass Twins</a>
+					<div class="dropdown-content" id="hgTwins" >
+						<a class="dropmid" href="ash-twin.html">Ash Twin</a>
+						<a class="dropbottom" href="ember-twin.html">Ember Twin</a>
+					</div>
+				</li>
+				<li><a href="timber-hearth.html">Timber Hearth</a></li>
+				<li><a href="brittle-hollow.html">Brittle Hollow</a></li>
+				<li><a href="giants-deep.html">Giant's Deep</a></li>
+				<li><a href="dark-bramble.html">Dark Bramble</a></li>
+				<!-- Other Locations Dropdown -->
+				<li class="dropdown">
+					<a href="javascript:void(0)" class="dropbtn">Other Locations</a>
+					<div class="dropdown-content" id="otherLocations" >
+						<a class="dropmid" href="timber-hearth.html#attlerock">The Attlerock</a>
+						<a class="dropmid" href="quantum-moon.html">Quantum Moon</a>
+						<a class="dropmid" href="interloper.html">The Interloper</a>
+						<a class="dropbottom" href="brittle-hollow.html#whiteHole">The White Hole</a>
+					</div>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	
+	<!-- BODY CONTENT -->
+	<main>
+		<h1>THE INTERLOPER</h1>
+	
+		<p>The Interloper is an small icy comet with a highly elliptical orbit around the sun. Due to its lack of gravity, anything on its surface will be easily swept away as it get closer to the sun's surface. Near the end of the loop, the Interloper will collide with the sun's surface.</p>
+		
+		<img src="images/interloper.jpg" alt="Photo of the Interloper">
+		
+		<button type="button" class="collapsible" id="spoiler">This <em>entire</em> page contains spoilers.<br>Click this button if you are SURE you want to see this page.</button>
+		<div class="content">
+			
+			<h2>NATURAL PHENOMENA</h2>
+			<p>As the Interloper moves closer to the sun, the ice on its surface will melt, revealing tunnels beneath the cracks leading to the comet's core. Many of the tunnels are covered with ghost matter, making finding the correct path to the core tricky.</p>
+			
+			<div class="natPhenom">
+				<video autoplay loop muted>
+					<source src="media/interloper_defrost.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+			</div>
+			
+			<h2>PLACES OF INTEREST</h2>
+			
+			<div class="poiRight">
+                <h3>Frozen Nomai Shuttle</h3>
+				<img src="images/frozen_nomai_shuttle.jpg" alt="Photo of the Frozen Nomai Shuttle" class="squareImage">
+				<p>A Nomai shuttle encased in ice located on the dark side of the Interloper. It's entrance is blocked by the ice and can only be accessed by calling the shuttle at <a href="ember-twin.html#ETGC">Ember Twin's gravity cannon</a>. Inside the shuttle is a Nomai log written by Clary, where she expresses her worry with her situation. She explains that she, Pye, and Poke landed on the Interloper not long after it's arrival in the solar system and picked up a strange reading coming from beneath the surface. Pye and Poke left the shuttle to investigate the source of the reading, but have not made contact with Clary, who remained on the shuttle to follow protocol, in a long time. A Nomai skeleton most likely belonging to Clary can be found inside the shuttle.<br><br></p>
+			</div>
+
+			<div class="poiLeft">
+				<h3>Ruptured Core</h3>
+				<img src="images/ruptured_core.jpg" alt="Photo of the Ruptured Core">
+				<p>This ruptured core lies inside the very center of the Interloper. While the Nomai were still alive, this core was a spherical stone casing under extreme pressure filled with ghost matter. When the casing ruptured, the ghost matter inside rapidly expanded, completely blanketing the solar system almost instantly. The spread of ghost matter is what lead to the extinction of the Nomai in this solar system. Two Nomai corpses, belonging to Poke and Pye can be found near the core. Poke and Pye had planned to warn the rest of the Nomai about the core, but it had ruptured before they could make it off of the comet.</p>
+			</div>
+		</div>
+	</main>
+	
+	<!-- FOOTER -->
+	<footer>
+		<section>
+			<h2>Where to Play</h2>
+			
+			<div>
+				<a href="https://store.steampowered.com/app/753640/Outer_Wilds/"><img src="images/steam_logo.png" alt="Steam"></a>
+				<a href="https://store.epicgames.com/en-US/p/outerwilds"><img src="images/epicgames_logo.png" alt="Epic Games"></a>
+				<a href="https://store.playstation.com/en-us/product/UP2470-PPSA08101_00-OUTERWILDSSIEA00"><img src="images/playstation_logo.png" alt="Playstation"></a>
+				<a href="https://www.xbox.com/en-us/games/store/outer-wilds/c596fkdkmqn7"><img src="images/xbox_logo.png" alt="Xbox"></a>
+				<a href="https://www.nintendo.com/us/store/products/outer-wilds-switch/"><img src="images/nintendo_logo.png" alt="Nintendo Switch"></a>
+			</div>
+			
+			<h3><a href="#top">Back to Top</a></h3>
+		</section>
+	</footer>
+	
+	<!-- Allows buttons to work -->
+	<script>
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+
+		for (i = 0; i < coll.length; i++) {
+		  coll[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var content = this.nextElementSibling;
+			if (content.style.display === "block") {
+			  content.style.display = "none";
+			} else {
+			  content.style.display = "block";
+			}
+		  });
+		}
+	</script>
+</body>
+
+</html>
