@@ -1,0 +1,36 @@
+/* TIMBER HEARTH PAGE CSS STYLES */
+
+/*  --- BANNER & NAVIGATION BAR SETTINGS --- */
+nav { /* Navbar - the bar itself */
+	background-color: #543128;
+}
+
+nav ul li a { /* Button text */
+	background-color: #774A33;
+}
+
+nav ul li a:hover, .dropdown:hover .dropbtn { /* Button hover color */
+	background-color: #706C6A;
+}
+
+
+
+/* --- MAIN STYLES --- */
+html { /* Background image */
+	background-image: linear-gradient(to bottom, #383C22, #2B3D4F, #5D5240);
+}
+
+main h1 {
+	text-shadow: #57522E 0.05em 0.05em;
+}
+
+main img, video { /* Image & Video Border */
+	border: 0.25em solid #BABCA7;
+}
+
+
+
+/* -- FOOTER STYLES -- */
+footer {
+	background-color: #543128;
+}

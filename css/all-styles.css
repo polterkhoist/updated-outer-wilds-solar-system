@@ -45,7 +45,6 @@
 	#cityPhotos
 	#travAudio
 	#simulation
-	#theater
 
 	#EGTC
 	#QML
@@ -69,6 +68,7 @@
 	.pNoMargin
 	.belowButton
 	.subTitle
+	.theater
 */
 
 
@@ -166,11 +166,11 @@ nav ul li a { /* Navbar button text */
 }
 
 #hgTwins { /* Makes the HG Twins dropdown options size match */
-	min-width: 8.21em;
+	min-width: 8em;
 }
 
 #otherLocations { /* Makes the Other Locations dropdown options size match */
-	max-width: 8.21em;
+	max-width: 8.15em;
 }
 
 

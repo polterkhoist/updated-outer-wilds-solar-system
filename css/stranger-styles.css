@@ -1,0 +1,98 @@
+/* STRANGER PAGE CSS STYLES */
+
+/*  --- BANNER & NAVIGATION BAR SETTINGS --- */
+nav { /* Navbar - the bar itself */
+	background-color: #263C3A;
+}
+
+nav ul li a { /* Button text */
+	background-color: #5E6764;
+}
+
+nav ul li a:hover, .dropdown:hover .dropbtn { /* Button hover color */
+	background-color: #A5C1B2;
+}
+
+
+
+/* --- SPOILER STYLES --- */
+.collapsible { /* Spoiler button settings */
+	background-color: #5E6764;
+	border: 0.1em solid white;
+	/* box-shadow: white 0 0 0.5em; */
+}
+
+.active, .collapsible:hover { /* Changes color on hover */
+	background-color: #A5C1B2;
+}
+
+
+
+/* --- MAIN STYLES --- */
+html { /* Background image */
+	background-image: linear-gradient(to bottom, #494136, #33312C);
+}
+
+main h1 {
+	text-shadow: #0EA960 0.05em 0.05em;
+}
+
+main img, video { /* Image & Video Border */
+	border: 0.25em solid #2B5357;
+}
+
+div#simulation img { /* Sets size of Sim Link image */
+    width: 60%;
+}
+
+div#simulation h2 { /* Sit by the Fire? settings */
+    margin: 1em auto;
+    transition: transform .2s;
+}
+
+div#simulation h2:hover { /* Zooms Sit by the fire? by 105% */
+    transform: scale(1.05);
+}
+
+div#simulation h2 a:link, div#simulation h2 a:visited { /* Sit by the fire? link settings */
+    color: #0EA960;
+    text-shadow: #59E6AF 0.05em 0.05em;
+    text-decoration: none;
+}
+
+div#simulation h2 a:hover { /* Sit by the fire? link hover settings */
+    text-shadow: #59E6AF 0.05em 0.05em, #A5C1B2 0 0 10px;
+}
+
+/* Theater Settings */
+
+div#theater { /* Theater video group */
+    display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+}
+
+div.theater video { /* Theater videos */
+    margin-bottom: 2.5em;
+    width: 20%;
+}
+
+
+
+/* -- FOOTER STYLES -- */
+footer {
+	background-color: #141A1C;
+}
+
+
+
+/* --- RESPONSIVE DESIGN --- */
+@media screen and (max-width: 600px) {
+    div#simulation img { /* Sets size of Sim Link image */
+        width: 95%;
+    }
+
+    div.theater video { /* Theater videos */
+        width: 95%;
+    }
+}

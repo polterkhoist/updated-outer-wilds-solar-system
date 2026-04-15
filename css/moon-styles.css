@@ -1,0 +1,62 @@
+/* QUANTUM MOON PAGE CSS STYLES */
+
+/*  --- BANNER & NAVIGATION BAR SETTINGS --- */
+nav { /* Navbar - the bar itself */
+	background-color: #323241;
+}
+
+nav ul li a { /* Button text */
+	background-color: #5D6172;
+}
+
+nav ul li a:hover, .dropdown:hover .dropbtn { /* Button hover color */
+	background-color: #888B98;
+}
+
+
+
+/* --- SPOILER STYLES --- */
+.collapsible { /* Spoiler button settings */
+	background-color: #5D6172;
+	border: 0.1em solid white;
+	/* box-shadow: white 0 0 0.5em; */
+}
+
+.active, .collapsible:hover { /* Changes color on hover */
+	background-color: #888B98;
+}
+
+
+
+/* --- MAIN STYLES --- */
+html { /* Background image */
+	background-image: linear-gradient(to bottom, #0E0E2C, #20255A, #33578C, #47355A, #694A52, #47355A, #33578C, #20255A);
+}
+
+main h1 {
+	text-shadow: #0E0E2C 0.05em 0.05em;
+}
+
+main img, video { /* Image & Video Border */
+	border: 0.25em solid #0E0E2C;
+}
+
+div#cityPhotos figure {
+    width: 30%;
+}
+
+
+
+/* -- FOOTER STYLES -- */
+footer {
+	background-color: #323241;
+}
+
+
+
+/* --- RESPONSIVE DESIGN --- */
+@media screen and (max-width: 600px) {
+    div#cityPhotos figure { /* Sets images to be stack on top of each other */
+		width: 95%;
+	}
+}

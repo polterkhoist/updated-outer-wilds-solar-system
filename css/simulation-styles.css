@@ -1,0 +1,78 @@
+/* SIMULATION PAGE CSS STYLES */
+
+/*  --- BANNER & NAVIGATION BAR SETTINGS --- */
+nav { /* Navbar - the bar itself */
+	background-color: #1F4757;
+}
+
+nav ul li a { /* Button text */
+	background-color: #476F63;
+}
+
+nav ul li a:hover, .dropdown:hover .dropbtn { /* Button hover color */
+	background-color: #927D5B;
+}
+
+
+
+/* --- SPOILER STYLES --- */
+.collapsible { /* Spoiler button settings */
+	background-color: #476F63;
+	border: 0.1em solid white;
+	/* box-shadow: white 0 0 0.5em; */
+}
+
+.active, .collapsible:hover { /* Changes color on hover */
+	background-color: #927D5B;
+}
+
+
+
+/* --- MAIN STYLES --- */
+html { /* Background image */
+	background-image: url("../images/banner_sim_bg.jpg");
+	background-color: black;
+}
+
+main h1 {
+    color: #0EA960;
+	text-shadow: #59E6AF 0.05em 0.05em;
+}
+
+main h2, main h3, main p {
+    text-shadow: #1F4757 0.05em 0.05em;
+}
+
+main img, video { /* Image & Video Border */
+	border: 0.25em solid #476F63;
+    box-shadow: #A5C1B2 0 0 0.75em;
+}
+
+/* Theater Settings */
+
+div#theater { /* Theater video group */
+    display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+}
+
+div.theater video { /* Theater videos */
+    margin-bottom: 2.5em;
+    width: 20%;
+}
+
+
+
+/* -- FOOTER STYLES -- */
+footer {
+	background-color: #1F4757;
+}
+
+
+
+/* --- RESPONSIVE DESIGN --- */
+@media screen and (max-width: 600px) {
+    div.theater video { /* Theater videos */
+        width: 95%;
+    }
+}

@@ -1,0 +1,49 @@
+/* GIANT'S DEEP PAGE CSS STYLES */
+
+/*  --- BANNER & NAVIGATION BAR SETTINGS --- */
+nav { /* Navbar - the bar itself */
+	background-color: #2A3C22;
+}
+
+nav ul li a { /* Button text */
+	background-color: #2A4538;
+}
+
+nav ul li a:hover, .dropdown:hover .dropbtn { /* Button hover color */
+	background-color: #737A63;
+}
+
+
+
+/* --- SPOILER STYLES --- */
+.collapsible { /* Spoiler button settings */
+	background-color: #2A4538;
+	border: 0.1em solid white;
+	/* box-shadow: white 0 0 0.5em; */
+}
+
+.active, .collapsible:hover { /* Changes color on hover */
+	background-color: #737A63;
+}
+
+
+
+/* --- MAIN STYLES --- */
+html { /* Background image */
+	background-image: linear-gradient(to bottom, #666E35, #414721, #323A22, #414721, #666E35);
+}
+
+main h1 {
+	text-shadow: #737A63 0.05em 0.05em;
+}
+
+main img, video { /* Image & Video Border */
+	border: 0.25em solid #0E1918;
+}
+
+
+
+/* -- FOOTER STYLES -- */
+footer {
+	background-color: #2A3C22;
+}

@@ -1,0 +1,63 @@
+/* ASH TWIN PAGE CSS STYLES */
+
+/*  --- BANNER & NAVIGATION BAR SETTINGS --- */
+nav { /* Navbar - the bar itself */
+	background-color: #3D281F;
+}
+
+nav ul li a { /* Button text */
+	background-color: #67372C;
+}
+
+nav ul li a:hover, .dropdown:hover .dropbtn { /* Button hover color */
+	background-color: #AF8F65;
+}
+
+
+
+/* --- SPOILER STYLES --- */
+.collapsible { /* Spoiler button settings */
+	background-color: #AF8F65;
+	border: 0.1em solid white;
+	/* box-shadow: white 0 0 0.5em; */
+}
+
+.active, .collapsible:hover { /* Changes color on hover */
+	background-color: #3D281F;
+}
+
+
+
+/* --- MAIN STYLES --- */
+html { /* Background image */
+	background-color: #170A07;
+}
+
+main h1 {
+	text-shadow: #AF8F65 0.05em 0.05em;
+}
+
+main img, video { /* Image & Video Border */
+	border: 0.25em solid #AF8F65;
+}
+
+div#cityPhotos figure { /* Loop State Image + Caption */
+	width: 30%;
+}
+
+
+
+/* -- FOOTER STYLES -- */
+footer {
+	background-color: #3D281F;
+}
+
+
+
+/* --- RESPONSIVE DESIGN --- */
+@media screen and (max-width: 600px) {
+    /* --- MAIN --- */
+    div#cityPhotos figure { /* Loop State Image + Caption */
+        width: 100%;
+    }
+}

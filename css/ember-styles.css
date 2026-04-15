@@ -1,0 +1,49 @@
+/* EMBER TWIN PAGE CSS STYLES */
+
+/*  --- BANNER & NAVIGATION BAR SETTINGS --- */
+nav { /* Navbar - the bar itself */
+	background-color: #683E2B;
+}
+
+nav ul li a { /* Button text */
+	background-color: #D0633A;
+}
+
+nav ul li a:hover, .dropdown:hover .dropbtn { /* Button hover color */
+	background-color: #AF8F65;
+}
+
+
+
+/* --- SPOILER STYLES --- */
+.collapsible { /* Spoiler button settings */
+	background-color: #D0633A;
+	border: 0.1em solid white;
+	/* box-shadow: white 0 0 0.5em; */
+}
+
+.active, .collapsible:hover { /* Changes color on hover */
+	background-color: #683E2B;
+}
+
+
+
+/* --- MAIN STYLES --- */
+html { /* Background image */
+	background-color: #301F19;
+}
+
+main h1 {
+	text-shadow: #9D5235 0.05em 0.05em;
+}
+
+main img, video { /* Image & Video Border */
+	border: 0.25em solid #9D5235;
+}
+
+
+
+/* -- FOOTER STYLES -- */
+footer {
+	background-color: #683E2B;
+}
